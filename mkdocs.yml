@@ -4,6 +4,7 @@ theme:
   name: material
   features:
     - navigation.tabs
+    - navigation.footer
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default

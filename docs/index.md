@@ -1,3 +1,7 @@
+---
+hide:
+  - footer
+---
 # Home
 
 This website hosts documentation written by [Cameron Kleiman](https://camk.co).
