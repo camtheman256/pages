@@ -161,7 +161,7 @@ order to convert it to something you can use.
 ### The `key` argument
 
 If you have some data that can't be compared directly, [min] and [max] (as well
-as [sorted] and [reversed] below) both take a `key=` argument, which allows you
+as [sorted] and [reversed]) both take a `key=` argument, which allows you
 to specify a lambda function that returns a value that will be compared instead.
 This works especially well for tuples of data.
 
