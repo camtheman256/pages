@@ -13,7 +13,7 @@ function calls because they don't return any value.
 
 This means this example below won't return anything and causes an error instead.
 
-```python
+```python linenums="1"
 # FIXME: DOES NOT WORK!! unsorted.sort() returns None, so this code will fail!
 def sort_tuple(unsorted):
     """Takes in a tuple and returns a sorted version."""
@@ -24,19 +24,19 @@ def sort_tuple(unsorted):
 If we tried this example in our REPL, we would see this error, due to
 `list_to_sort.sort()` returning `None`.
 
-```python
+```pycon
 >>> unsorted = (7, 5, 3, 9, 12)
 >>> sort_tuple(unsorted)
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "<stdin>", line 4, in sort_tuple
+  File "<stdin>", line 2, in <module>
+  File "<stdin>", line 5, in sort_tuple
 TypeError: 'NoneType' object is not iterable
 ```
 
 However, we can reference the original variable after calling [list.sort] on it,
 and now the function will work properly.[^sort]
 
-```python
+```python linenums="1"
 def sort_tuple(unsorted):
     """Takes in a tuple and returns a sorted version."""
     list_to_sort = list(unsorted)
@@ -44,7 +44,7 @@ def sort_tuple(unsorted):
     return tuple(list_to_sort)
 ```
 
-```python
+```pycon
 >>> sort_tuple(unsorted)
 (3, 5, 7, 9, 12)
 ```
@@ -59,6 +59,7 @@ def sort_tuple(unsorted):
 [list.sort]: https://docs.python.org/3/library/stdtypes.html#list.sort
 [set.add]: https://docs.python.org/3/library/stdtypes.html#frozenset.add
 [set.remove]: https://docs.python.org/3/library/stdtypes.html#frozenset.remove
+[sorted]: https://docs.python.org/3/library/functions.html#sorted
 
 ## Boolean Laundering / Unnecessary nesting
 
@@ -160,7 +161,7 @@ attention to how indented lines of code are.
 Say we create a function to increment a counter, and we want to return the last
 value.
 
-```python
+```python linenums="1"
 def count(n):
     counter = 0
     while counter < n:
@@ -168,13 +169,13 @@ def count(n):
         return counter  # Wrong indentation level!! Returns immediately.
 ```
 
-Because of how it's indented, the return statement is _inside_ the while loop.
-This means that the function will return on the first iteration of the while
-loop, preventing the loop from continuing. Without changing any code, we can
-change the indentation level of the last line to make it return after the loop
-is finished.
+Because of how it's indented, the return statement on line 5 is _inside_ the
+while loop. This means that the function will return on the first iteration of
+the while loop, preventing the loop from continuing. Without changing any code,
+we can change the indentation level of the last line to make it return after the
+loop is finished.
 
-```python
+```python linenums="1"
 def count(n):
     counter = 0
     while counter < n:

@@ -28,7 +28,7 @@ a specific line of your code.
 Say I create a function that takes in a list of names, and prints `Hello, name!`
 for every person in the list, and save it in a Python file called hello.py.
 
-```python
+```python linenums="1"
 def say_hello(people):
     for person in people:
         print(f"Hello, {person}!")
@@ -77,7 +77,7 @@ opposed to `camelCase` or `UpperCamelCase`. Use `UpperCamelCase` for your
 classes. Following these conventions will make your code easier to read by other
 Python developers and LAs in 6.101.
 
-```python
+```python linenums="1"
 # Don't do this, it's unclear how this code works.
 temp = "cameron kleiman"
 
@@ -88,7 +88,7 @@ def helper(string):
 result = helper(temp)
 ```
 
-```python
+```python linenums="1"
 # Do this instead! What each line does is clear from the variable and function names.
 full_name = "cameron kleiman"
 
@@ -115,7 +115,7 @@ method for booking a ticket which modifies a global list of flights and
 increments a ticket counter. Some comments have been added that **do not** add
 any helpful information to someone reading the code.
 
-```python
+```python linenums="1"
 flights = [
     {'origin': 'BOS', 'destination': 'JFK', 'seats': 150},
     {'origin': 'BOS', 'destination': 'ATL', 'seats': 200},
@@ -155,7 +155,7 @@ Comments that address the broader aspects of _why_ your code works the way it
 does will be much more helpful to anyone reviewing your code. See the example
 below for some improved commenting:
 
-```python
+```python linenums="1"
 def book_ticket(origin, destination):
     """
     Books a ticket and updates the flights, tickets, and tickets_issued

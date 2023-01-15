@@ -17,7 +17,7 @@ them, and this section will explain some of them. For the full list, see
 character. By default, it will just split on spaces, though you can specify a
 character to split on.
 
-```python
+```pycon
 >>> "1 2 3".split()
 ['1', '2', '3']
 
@@ -31,7 +31,7 @@ comprehension) that you want to merge together into a string. You can use the
 empty string (`""`), if you want to join the elements together without anything
 in between.
 
-```python
+```pycon
 >>> ",".join(["a", "b", "c"])
 'a,b,c'
 
@@ -46,7 +46,7 @@ in between.
 replaces it with the new value and returns the modified string. If it doesn't
 find it, it returns the original string.
 
-```python
+```pycon
 >>> "This guide is for 6.100 students.".replace("100", "101")
 'This guide is for 6.101 students.'
 
@@ -72,7 +72,7 @@ The most basic use of [f-strings] requires putting an `f` before the start of
 your Python string, and then, you can embed variables in your string using curly
 braces (`{}`).
 
-```python
+```pycon
 >>> name = "Cameron"
 
 >>> f"Hello, {name}!"
@@ -82,7 +82,7 @@ braces (`{}`).
 Putting an equals sign after the variable name prints out the name of the
 variable as well, and this can be extremely useful when you're debugging.
 
-```python
+```pycon
 >>> f"Variables: {name=}"
 "Variables: name='Cameron'"
 ```
@@ -110,7 +110,7 @@ maximum. They take anything that can be compared, like `int`s and `float`s, or
 you can pass them strings to use alphabetical order. They can be used in two
 different ways. You can pass in multiple arguments, like so:
 
-```python
+```pycon
 >>> max(7, 5, 8, 5.5)
 8
 
@@ -121,7 +121,7 @@ different ways. You can pass in multiple arguments, like so:
 You can also give an iterable of items, like a list, set, tuple, or
 comprehension, to find the minimum or maximum of as a single argument.
 
-```python
+```pycon
 >>> max([7, 5, 8, 5,5])
 8
 
@@ -137,7 +137,7 @@ comprehension, to find the minimum or maximum of as a single argument.
 [sorted] returns a copy of an iterable (like a list or tuple) as a sorted list,
 while [list.sort] and list.reverse work in-place.
 
-```python
+```pycon
 >>> sorted(["python", "typescript", "html"])
 ['html', 'python', 'typescript']
 ```
@@ -145,7 +145,7 @@ while [list.sort] and list.reverse work in-place.
 [reversed] returns an iterable, so you need to call [list] or [tuple] on it in
 order to convert it to something you can use.
 
-```python
+```pycon
 >>> reversed(("first", "second", "third"))
 <reversed object at 0x10099b490>
 >>> list(reversed(("first", "second", "third")))
@@ -165,7 +165,7 @@ as [sorted] and [reversed] below) both take a `key=` argument, which allows you
 to specify a lambda function that returns a value that will be compared instead.
 This works especially well for tuples of data.
 
-```python
+```pycon
 >>> max(("foo", 4), ("bar", 7), ("baz", 2), key=lambda v: v[1])
 ('bar', 7)
 
@@ -175,14 +175,14 @@ This works especially well for tuples of data.
 
 We can also call [sorted] with the `key` argument.
 
-```python
+```pycon
 >>> sorted(["longer string", "long string", "string", "str"], key=len)
 ['str', 'string', 'long string', 'longer string']
 ```
 
 If you want to sort in place, [list.sort] also accepts the same `key` argument.
 
-```python
+```pycon
 >>> data = [("foo", 4), ("bar", 7), ("baz", 2)]
 >>> data.sort(key=lambda v: v[1])
 >>> data
@@ -192,7 +192,7 @@ If you want to sort in place, [list.sort] also accepts the same `key` argument.
 Sorting (or using min or max) tuples _without_ a `key` parameter sorts based on
 the first element in the tuples.
 
-```python
+```pycon
 >>> data.sort()
 >>> data
 [('bar', 7), ('baz', 2), ('foo', 4)]
@@ -203,14 +203,14 @@ the first element in the tuples.
 **[any]** and **[all]** are functions that check if _any_ or _all_ values in an
 iterable are truthy.[^3] Here's some examples:
 
-```python
+```pycon
 >>> any([True, False, False])
 True
 >>> True or False or False  # The same as combining the elements with or
 True
 ```
 
-```python
+```pycon
 >>> all([True, False, False])
 False
 >>> True and False and False  # The same as combining the elements with and
@@ -220,7 +220,7 @@ False
 These can be especially helpful with comprehensions, or types that aren't
 booleans.
 
-```python
+```pycon
 >>> all(len(s) > 3 for s in ["apple", "banana", "kiwi"])
 True
 >>> any([0, 2, 0])
@@ -240,7 +240,7 @@ True
 comprehensions as well, so it comes in handy often. Try to use it instead of a
 for loop when you can.
 
-```python
+```pycon
 >>> sum([1,2,3])
 6
 >>> sum(i for i in range(10))  # Sum of 1 to 10
@@ -257,7 +257,7 @@ you're not going to iterate over it. This is helpful if you have two or more
 lists that correspond to each other and want to iterate over them at the same
 time.
 
-```python
+```pycon
 >>> labels = ['apples', 'bananas', 'kiwis']
 >>> inventory = [12, 30, 5]
 >>> zip(labels, inventory)
@@ -270,7 +270,7 @@ What's cool is that this is the same format as [dict.items], so the [dict]
 constructor takes in key-value pairs in this format. So, it's super easy to make
 a dictionary from our zip output.
 
-```python
+```pycon
 >>> dict(zip(labels, inventory))
 {'apples': 12, 'bananas': 30, 'kiwis': 5}
 ```
@@ -279,7 +279,7 @@ Have you ever been iterating over a list and wanted its indices as well as its
 values? **[enumerate]** is just the function you need. It takes in an iterable
 and returns an iterable of tuple pairs `(index, value)`.
 
-```python
+```pycon
 >>> list(enumerate(labels))
 [(0, 'apples'), (1, 'bananas'), (2, 'kiwis')]
 >>> for index, label in enumerate(labels):
@@ -306,7 +306,7 @@ If you have a tuple, you can separate variables by commas to assign each
 variable to that element in a tuple, like so. This behavior is referred to as
 "unpacking" the tuple.
 
-```python
+```pycon
 >>> number, letter = (1, "A")
 >>> number
 1
@@ -318,7 +318,7 @@ This feature gets useful once we use it to work with data that's structured in
 tuples. Without tuple unpacking, you might be inclined to access the flight
 information in this example by indexing into the tuple, like this:
 
-```python
+```pycon
 >>> flights = [(1234, "BOS", "LAX"), (5678, "JFK", "ATL")]
 >>> for flight in flights:
 ...     print(f"Flight {flight[0]} departs {flight[1]} for {flight[2]}")
@@ -329,7 +329,7 @@ Flight 5678 departs JFK for ATL
 However, a much more readable option would be to break apart, or "unpack", the
 flight tuple in the for loop, like this:
 
-```python
+```pycon
 >>> for flight in flights:
 ...     num, origin, dest = flight
 ...     print(f"Flight {num} departs {origin} for {dest}")
@@ -344,7 +344,7 @@ This makes the code much more readable for when anyone is debugging your code.
 Python also has a helpful shorthand for this, which moves the unpacking into the
 first line of the for loop, like this:
 
-```python
+```pycon
 >>> for num, origin, dest in flights:
 ...     print(f"Flight {num} departs {origin} for {dest}")
 Flight 1234 departs BOS for LAX
@@ -375,7 +375,7 @@ are immutable, so we can put them inside sets.
 You can create a [frozenset] with its constructor from any iterable, like
 another set, list, generator, or even a string.
 
-```python
+```pycon
 >>> alphabet = frozenset("abcdefghijklmnopqrstuvwxyz")
 >>> alphabet
 frozenset({'q', 'm', 'w', 'x', 'h', 's', 't', 'a', 'n', 'j', 'c', 'f', 'g', 'u', 'd', 'l', 'k', 'p', 'r', 'o', 'e', 'b', 'z', 'v', 'i', 'y'})
@@ -385,7 +385,7 @@ Say I have a class of students that I arrange into groups of two. The specifics
 of how I make the groups don't matter all that much, just that we have a list of
 lists at this point.
 
-```python
+```pycon
 >>> students = ["John", "Jack", "Sally", "Susan", "Alice", "Bob"]
 >>> random.shuffle(students)
 >>> groups = [students[i:i+2] for i in range(0, len(students), 2)]
@@ -403,7 +403,7 @@ do a couple things:
 
 A better approach would be to convert all the inner lists to sets, like this:
 
-```python
+```pycon
 >>> groups = [set(g) for g in groups]
 >>> groups
 [{'John', 'Susan'}, {'Bob', 'Sally'}, {'Alice', 'Jack'}]
@@ -421,7 +421,7 @@ check for inclusion, which could be slow if the list is very long.
 **The best approach is to use frozensets inside sets.** Fortunately, this is
 super easy to adopt.
 
-```python
+```pycon
 >>> groups = {frozenset(g) for g in groups}
 >>> groups
 {frozenset({'Alice', 'Jack'}), frozenset({'John', 'Susan'}), frozenset({'Bob', 'Sally'})}
@@ -437,7 +437,7 @@ sets to check inside our list of frozensets. This is because Python treats
 frozensets and sets the same, and you can even check if their contents are
 equal:
 
-```python
+```pycon
 >>> {'a'} == frozenset({'a'})
 True
 ```
@@ -454,7 +454,7 @@ The difference is that [dict.get] doesn't raise a [KeyError] when `key` isn't in
 the dictionary (it returns `None` instead), and we can even specify a default
 value to get returned.
 
-```python
+```pycon
 >>> inventory = {'carrots': 3, 'cucumbers': 7}
 >>> inventory['peppers']  # booo, KeyError :(
 Traceback (most recent call last):
@@ -475,7 +475,7 @@ mutable values that we want to either initialize or change. Say I have a list of
 flights, and I'm trying to make a dictionary mapping origins to the
 destinations:
 
-```python
+```pycon
 >>> flights = [('BOS', 'JFK'), ('BOS', 'ATL'), ('JFK', 'LAX'), ('LAX', 'SFO'), ('BOS', 'LAX'), ('JFK', 'DFW')]
 >>> destinations = {}
 >>> for origin, dest in flights:
@@ -492,7 +492,7 @@ create a new set in the dictionary for a given key. [dict.setdefault] lets us
 combine these two steps into one by creating a new set for us automatically if
 one doesn't exist already.
 
-```python
+```pycon
 >>> for origin, dest in flights:
 ...     destinations.setdefault(origin, set()).add(dest)
 >>> destinations
@@ -508,7 +508,7 @@ The `|` operator is the "intersection" operator for sets and dictionaries in
 Python. In short, it lets you merge together two sets, or two dictionaries. In
 the case of a [dict], the values in the right dict take precedence.
 
-```python
+```pycon
 >>> {'a'} | {'b', 'c'}
 {'b', 'a', 'c'}
 >>> {'a': 1} | {'b': 2, 'a': 3}
@@ -519,7 +519,7 @@ Like with other operators in Python, we can combine the intersection operator
 with the `=` assignment operator, using the `|=` operator to "update" a
 dictionary or set with new values.
 
-```python
+```pycon
 >>> s = {1,2,3}
 >>> s |= {4,5,6}
 >>> s
@@ -533,7 +533,7 @@ dictionary or set with new values.
 The **[dict.update]** and **[set.update]** methods are identical to using the
 `|=` operator.
 
-```python
+```pycon
 >>> s.update({7,8,9})
 >>> s
 {1, 2, 3, 4, 5, 6, 7, 8, 9}
@@ -551,7 +551,7 @@ The **[dict.update]** and **[set.update]** methods are identical to using the
 pairs, and you should use it if you need to access both the keys and values of a
 dictionary in a for loop. Here's how it works:
 
-```python
+```pycon
 >>> inventory = {'carrots': 3, 'cucumbers': 7, 'broccoli': 10}
 >>> for key, value in inventory.items():
 ...     print(f"There are {value} pieces of {key} in the store.")

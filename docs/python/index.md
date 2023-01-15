@@ -39,6 +39,15 @@ top-to-bottom, whatever you like. Some of these sections might be more useful
 after you've done a few labs in 6.101, so feel free to skim and check back later
 once you've made some more progress.
 
+## Python Standard Library
+
+Many parts of this guide contain links to the [Python Standard Library]
+reference. This reference contains the authoritative documentation on the
+built-in functions and data types that you'll use in 6.101. I highly recommend
+using this resource if you want to learn more about them from the official
+manual.
+
+[python standard library]: https://docs.python.org/3/library/index.html
 [general advice]: 01_advice.md
 [useful functions]: 02_functions.md
 [editing python]: 03_editing.md

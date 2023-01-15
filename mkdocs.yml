@@ -8,12 +8,14 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      primary: "deep purple"
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
 
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: "light blue"
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
@@ -22,3 +24,5 @@ markdown_extensions:
   - toc:
       permalink: true
   - footnotes
+  - pymdownx.highlight
+  - pymdownx.superfences

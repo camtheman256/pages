@@ -21,7 +21,7 @@ Putting that together, comprehensions look like:
 
 Comprehensions are made to take code that looks like this:
 
-```python
+```python linenums="1"
 # Creates a list of the squares of even numbers from 0 to 99
 nums = []
 
@@ -59,7 +59,7 @@ The **list comprehension** is the most basic and shown in the examples above. A
 list comprehension returns a new list with the results of the comprehension and
 is surrounded by square brackets (`[]`).
 
-```python
+```pycon
 >>> flights = [
 ...     {'origin': 'BOS', 'destination': 'JFK', 'seats': 150},
 ...     {'origin': 'BOS', 'destination': 'ATL', 'seats': 200},
@@ -78,7 +78,7 @@ is surrounded by square brackets (`[]`).
 We can also make **set comprehensions** easily by surrounding the comprehension
 in curly braces (`{}`).
 
-```python
+```pycon
 >>> origins = {f['origin'] for f in flights}
 >>> origins
 {'LAX', 'JFK', 'BOS'}
@@ -92,7 +92,7 @@ in the _expression_ portion of the comprehension. Because dict comprehensions
 are a bit complicated, here's a simpler example that uses them to map letters in
 the alphabet to their index.
 
-```python
+```pycon
 >>> alphabet = "abcdefghijklmnopqrstuvwxyz"
 >>> {letter: index+1 for index, letter in enumerate(alphabet)}
 {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9, 'j': 10,
@@ -104,7 +104,7 @@ Going back to the flights data, we can use the route tuples
 `(origin, destination)` as keys of a dictionary, where the values are the number
 of seats on that flight.
 
-```python
+```pycon
 >>> seats_by_route = {(f['origin'], f['destination']): f['seats'] for f in flights}
 >>> seats_by_route
 {('BOS', 'JFK'): 150, ('BOS', 'ATL'): 200, ('JFK', 'LAX'): 250, ('LAX', 'SFO'): 100,
@@ -119,7 +119,7 @@ constructors, such as tuple or frozenset. They can be created by surrounding a
 comprehension with parentheses (`()`), but more often, you'll just want to pass
 them directly to whatever data type you need them to be.
 
-```python
+```pycon
 >>> (i for i in range(10))
 <generator object <genexpr> at 0x100cfb510>
 >>> frozenset(l.upper() for l in alphabet)
@@ -134,7 +134,7 @@ comprehension in parentheses (like `(i for i in range(10))`) will give you a
 generator, _not a tuple!_ If you want a tuple, pass your generator comprehension
 to the tuple constructor, like so:
 
-```python
+```pycon
 >>> tuple(i for i in range(10))
 (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
 ```
