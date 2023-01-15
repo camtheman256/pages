@@ -115,7 +115,7 @@ Python 3.11.1 (v3.11.1:a7a450f84a, Dec  6 2022, 15:24:06) [Clang 13.0.0 (clang-1
 Type 'copyright', 'credits' or 'license' for more information
 IPython 8.5.0 -- An enhanced Interactive Python. Type '?' for help.
 
->>>
+In [1]: 
 ```
 
 To learn more about IPython, you can follow
