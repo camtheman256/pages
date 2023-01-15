@@ -10,9 +10,9 @@ squiggles under your code, and hover over these spots to find issues in your
 code. Learning to pay attention to these squiggles can save you hours of
 debugging trying to find out why something isn't working.
 
-![An undefined variable highlighted in VSCode](highlight.png)
+![An undefined variable highlighted in VSCode](assets/highlight.png)
 
-![An indentation error](highlight2.png)
+![An indentation error](assets/highlight2.png)
 
 ## Error messages are telling you something!
 
