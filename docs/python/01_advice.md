@@ -110,7 +110,7 @@ $ pip3 install ipython
 Then you can run `ipython` in your terminal, and you should see something like
 this:
 
-```python
+```pycon
 Python 3.11.1 (v3.11.1:a7a450f84a, Dec  6 2022, 15:24:06) [Clang 13.0.0 (clang-1300.0.29.30)]
 Type 'copyright', 'credits' or 'license' for more information
 IPython 8.5.0 -- An enhanced Interactive Python. Type '?' for help.
