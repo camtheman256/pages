@@ -1,6 +1,8 @@
-# Developer Tips
+# General Advice
 
-TODO
+If you're an MIT student taking 6.101 or just someone picking up programming,
+welcome! These pieces of advice will help you as you start to work on more
+complicated projects and sharpen your software development skills.
 
 ## Google is your friend
 

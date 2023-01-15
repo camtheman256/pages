@@ -16,3 +16,8 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - footnotes

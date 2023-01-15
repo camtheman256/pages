@@ -1,4 +1,4 @@
-# Tips for Editing Python
+# Editing Python
 
 This section contains general tips to improve your experience writing Python.
 
@@ -13,6 +13,9 @@ debugging trying to find out why something isn't working.
 ![An undefined variable highlighted in VSCode](assets/highlight.png)
 
 ![An indentation error](assets/highlight2.png)
+
+[vscode]: https://code.visualstudio.com/
+[pycharm]: https://www.jetbrains.com/pycharm/
 
 ## Error messages are telling you something!
 

@@ -1,9 +1,9 @@
-# Avoid Doing This
+# Avoid This
 
 This section includes some pitfalls to avoid when you're writing Python that
 I've seen crop up in student code in 6.101.
 
-## Assign the output of functions that don't return anything
+## Don't assign the output of functions that don't return anything
 
 Pay attention to what functions in Python return! [list.append], [set.remove],
 [set.add], and [list.sort] are some common functions that you might use in your
@@ -14,7 +14,7 @@ function calls because they don't return any value.
 This means this example below won't return anything and causes an error instead.
 
 ```python
-## FIXME: DOES NOT WORK!! unsorted.sort() returns None, so this code will fail!
+# FIXME: DOES NOT WORK!! unsorted.sort() returns None, so this code will fail!
 def sort_tuple(unsorted):
     """Takes in a tuple and returns a sorted version."""
     list_to_sort = list(unsorted)
