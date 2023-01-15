@@ -16,6 +16,11 @@ They won't help you with the labs directly, but they'll improve your Python
 developer experience to help you write better, more efficient code that you can
 understand. Without further ado, here's **Python Tricks You Should Know**.
 
+<!-- prettier-ignore-start -->
+!!! note
+    **This document is a largely unedited draft.** If you have feedback or comments on this guide, please leave issues/PRs on GitHub at [this link](https://github.com/camtheman256/pages/tree/main/docs/python) or email me at <ckleiman@mit.edu>.
+<!-- prettier-ignore-end -->
+
 ## What's Included
 
 This guide contains a few sections on different topics that will be more or less
