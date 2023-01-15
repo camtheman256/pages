@@ -2,3 +2,5 @@ site_name: Cameron's Pages
 
 theme:
   name: material
+  features:
+    - navigation.tabs
