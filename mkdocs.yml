@@ -1,7 +1,5 @@
 site_name: Cameron's Pages
 
-repo_url: https://github.com/camtheman256/pages
-
 theme:
   name: material
   icon:
@@ -9,7 +7,6 @@ theme:
   features:
     - navigation.tabs
     - navigation.footer
-    - content.action.view
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default

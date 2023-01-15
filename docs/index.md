@@ -2,9 +2,11 @@
 hide:
   - footer
 ---
+
 # Home
 
-This website hosts documentation written by [Cameron Kleiman](https://camk.co).
+This website hosts documentation written by [Cameron Kleiman](https://camk.co)
+at [camtheman256/pages](https://github.com/camtheman256/pages).
 
 This site contains:
 
