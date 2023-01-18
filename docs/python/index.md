@@ -52,9 +52,18 @@ built-in functions and data types that you'll use in 6.101. I highly recommend
 using this resource if you want to learn more about them from the official
 manual.
 
+## License
+
+[![CC BY-SA Icon](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)][license]
+
+This guide, which includes all pages under this section, is licensed under a
+[Creative Commons Attribution-ShareAlike 4.0 International License][license].
+Feel free to copy or adapt it for your own Python course materials!
+
 [python standard library]: https://docs.python.org/3/library/index.html
 [general advice]: 01_advice.md
 [useful functions]: 02_functions.md
 [editing python]: 03_editing.md
 [comprehensions]: 04_comprehensions.md
 [avoid this]: 05_avoid.md
+[license]: https://creativecommons.org/licenses/by-sa/4.0/
