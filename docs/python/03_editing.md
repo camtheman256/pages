@@ -126,12 +126,9 @@ flights = [
 ]
 
 tickets = []
-tickets_issued = 0
 
 
 def book_ticket(origin, destination):
-    global tickets_issued
-
     for flight in flights:  # Iterate through all the flights
         # If the flight origin and destination match, decrement seats by 1
         if origin == flight['origin'] and destination == flight['destination']:
@@ -140,9 +137,8 @@ def book_ticket(origin, destination):
     else:
         return
 
-    tickets_issued += 1  # Increment tickets_issued
     # Create a new dictionary for the ticket
-    ticket = {'id': tickets_issued,
+    ticket = {'id': next_id(),
               'origin': origin, 'destination': destination}
     tickets.append(ticket)
     return ticket  # Return the ticket
@@ -150,20 +146,17 @@ def book_ticket(origin, destination):
 
 These comments just restate directly what the code is doing, without addressing
 _why_ the code works that way. Also, some less common elements such as the
-`global tickets_issued` and `else` block of the for loop are left unexplained.
-Comments that address the broader aspects of _why_ your code works the way it
-does will be much more helpful to anyone reviewing your code. See the example
-below for some improved commenting:
+`else` block of the for loop are left unexplained. Comments that address the
+broader aspects of _why_ your code works the way it does will be much more
+helpful to anyone reviewing your code. See the example below for some improved
+commenting:
 
 ```python linenums="1"
 def book_ticket(origin, destination):
     """
-    Books a ticket and updates the flights, tickets, and tickets_issued
+    Books a ticket and updates the flights and tickets
     global variables with the new ticket.
     """
-    # Initializes the tickets_issued global inside the function
-    global tickets_issued
-
     # Search for matching flight and update its number of seats
     for flight in flights:
         if origin == flight['origin'] and destination == flight['destination']:
@@ -173,8 +166,7 @@ def book_ticket(origin, destination):
         return  # if none of the flights match, return without doing anything
 
     # Issue a new ticket with the next id number
-    tickets_issued += 1
-    ticket = {'id': tickets_issued,
+    ticket = {'id': next_id(),
               'origin': origin, 'destination': destination}
     tickets.append(ticket)
     return ticket
@@ -186,8 +178,8 @@ This example uses comments more effectively compared to the previous one by:
   level
 - adding other high level comments inside the function that explain what
   specific chunks of the function do
-- explaining what the more complicated pieces of the code do, such as the
-  `global tickets_issued` and `else` block of the for loop
+- explaining what the more complicated pieces of the code do, such as the `else`
+  block of the for loop
 
 **In short, use comments to explain the higher level _why_ of your code without
 just restating what the code does.**
