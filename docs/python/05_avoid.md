@@ -22,7 +22,7 @@ def sort_tuple(unsorted):
 ```
 
 If we tried this example in our REPL, we would see this error, due to
-`list_to_sort.sort()` returning `None`.
+`#!py list_to_sort.sort()` returning `None`.
 
 ```pycon
 >>> unsorted = (7, 5, 3, 9, 12)
@@ -51,7 +51,7 @@ def sort_tuple(unsorted):
 
 [^sort]:
     The best way to sort tuples would be to use the [sorted] function and
-    convert to a tuple, like `tuple(sorted(unsorted))`, but for this example, we
+    convert to a tuple, like `#!py tuple(sorted(unsorted))`, but for this example, we
     convert to a list so we can use [list.sort].
 
 [list.append]:
@@ -131,7 +131,7 @@ if condition1 and condition2 and condition3:
 ## When to use `i` as an iterator
 
 In many programming languages, it's convention to use `i` as an iterator, which
-is why you'll see `for i in range(n)` as the first line of many for loops in
+is why you'll see `#!python for i in range(n)` as the first line of many for loops in
 Python. However, you should only use `i` when you're iterating over a range of
 integers, to match convention with other languages. If you're iterating over
 other data structures, try to pick a variable name that captures what that
@@ -188,3 +188,45 @@ function inside of a loop will stop its execution and might not be what you
 intend to do.
 
 [indentation]: https://www.geeksforgeeks.org/indentation-in-python/
+
+## Making Unnecessary Copies
+
+Functions that update an object in-place will generally be much faster another
+function that returns a copy of that data structure. As an example, consider the
+following code that adds all numbers under a million to a set `b`.
+
+```python linenums="1" hl_lines="3"
+b = set()
+for i in range(1_000_000):
+    b = b | {i,}  # SUPER SLOW!
+```
+
+Line 3 will create a new set (containing `b | {i,}`) on _every single iteration_
+and reassign the `b` variable to that new set. Creating all those new sets takes
+a long time to finish, and in reality, we just want to add some new values to
+the `b` set.
+
+Fortunately, we have lots of options for how to fix this line of code. An easy
+one would be to replace line 3 with our handy `|=` operator from the
+[Useful Functions section](02_functions.md#the-operator-dictupdate-and-setupdate).
+
+```python
+b |= {i,}
+```
+
+If you remember, this operator is identical to [set.update], so we could write
+line 3 this way as well:
+
+```python
+b.update({i,})
+```
+
+Finally, we could also just use the [set.add] function you're familiar with to
+add a single element to our set.
+
+```python
+b.add(i)
+```
+
+[set.update]: https://docs.python.org/3/library/stdtypes.html#frozenset.update
+[set.add]: https://docs.python.org/3/library/stdtypes.html#frozenset.add
