@@ -103,6 +103,54 @@ anything you can iterate over, and this includes lists, sets, tuples, dicts,
 generators, and any class that implements the `__iter__` method. These methods
 should help save you from writing tons of for loops.
 
+### The `+` operator and [list.extend]
+
+The `+` operator on lists is a convenient way to combine two lists together,
+returning a new list with all elements from both lists.
+
+```pycon
+>>> [1, 2] + [3, 4]
+[1, 2, 3, 4]
+```
+
+If we want to update a list in place, we can use **[list.extend]**, which is
+faster than using the `+` operator. [list.extend] is more flexible in that it
+lets us specify any iterable instead of only lists.
+
+```pycon
+>>> a = [1, 2]
+>>> a.extend([3, 4])
+>>> a.extend({5, 6})  # set
+>>> a.extend((7, 8))  # tuple
+>>> a
+[1, 2, 3, 4, 5, 6, 7, 8]
+```
+
+The `+=` operator is actually identical to [list.extend], **_not_** the `+`
+operator. This means that `#!py a = a + [3, 4]` and `#!py a += [3, 4]` behave
+differently! The `+=` operator extends the underlying list, while the `+`
+operator creates a new, combined list and assigns that to `a`. Here's an example
+of this behavior in action.
+
+```pycon
+>>> a = [1, 2]
+>>> b = [1, 2]
+>>> a2, b2 = a, b  # Alias a2 and b2 to a and b, respectively
+>>> a += [3, 4]
+>>> b = b + [3, 4]
+>>> a2
+[1, 2, 3, 4]
+>>> b2
+[1, 2]
+```
+
+Notice that the `+=` operator extended the list, so this change was also
+reflected in `a2`. Meanwhile, the `+` operator made a new list and assigned it
+to `b`, so `b2` was left pointing to the original list.
+
+[list.extend]:
+  https://docs.python.org/3/library/stdtypes.html#mutable-sequence-types
+
 ### [min], [max]
 
 **[min]** finds the minimum of multiple elements, and **[max]** finds the
