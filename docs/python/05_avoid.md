@@ -51,8 +51,8 @@ def sort_tuple(unsorted):
 
 [^sort]:
     The best way to sort tuples would be to use the [sorted] function and
-    convert to a tuple, like `#!py tuple(sorted(unsorted))`, but for this example, we
-    convert to a list so we can use [list.sort].
+    convert to a tuple, like `#!py tuple(sorted(unsorted))`, but for this
+    example, we convert to a list so we can use [list.sort].
 
 [list.append]:
   https://docs.python.org/3/library/stdtypes.html#mutable-sequence-types
@@ -131,10 +131,10 @@ if condition1 and condition2 and condition3:
 ## When to use `i` as an iterator
 
 In many programming languages, it's convention to use `i` as an iterator, which
-is why you'll see `#!python for i in range(n)` as the first line of many for loops in
-Python. However, you should only use `i` when you're iterating over a range of
-integers, to match convention with other languages. If you're iterating over
-other data structures, try to pick a variable name that captures what that
+is why you'll see `#!python for i in range(n)` as the first line of many for
+loops in Python. However, you should only use `i` when you're iterating over a
+range of integers, to match convention with other languages. If you're iterating
+over other data structures, try to pick a variable name that captures what that
 element represents, like in the following examples:
 
 ```python
