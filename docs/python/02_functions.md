@@ -209,8 +209,8 @@ order to convert it to something you can use.
 ### The `key` argument
 
 If you have some data that can't be compared directly, [min] and [max] (as well
-as [sorted] and [reversed]) both take a `key=` argument, which allows you
-to specify a lambda function that returns a value that will be compared instead.
+as [sorted] and [reversed]) both take a `key=` argument, which allows you to
+specify a lambda function that returns a value that will be compared instead.
 This works especially well for tuples of data.
 
 ```pycon
@@ -588,6 +588,14 @@ The **[dict.update]** and **[set.update]** methods are identical to using the
 >>> d.update({'c':3})
 >>> d
 {'a': 1, 'b': 2, 'c': 3}
+```
+
+[dict.update] also overwrites values in the dictionary with the new values.
+
+```pycon
+>>> d.update({'c': 30, 'd': 40})
+>>> d
+{'a': 1, 'b': 2, 'c': 30, 'd': 40}
 ```
 
 [dict.update]: https://docs.python.org/3/library/stdtypes.html#dict.update
