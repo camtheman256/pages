@@ -1,4 +1,12 @@
 site_name: Cameron's Pages
+site_author: Cameron Kleiman
+site_description: A documentation website for Cameron Kleiman
+copyright: Cameron Kleiman
+repo_url: https://github.com/camtheman256/pages
+edit_uri: edit/main/docs
+
+site_url: https://pages.camk.co/
+
 
 theme:
   name: material
@@ -7,6 +15,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.footer
+    - content.action.edit
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
