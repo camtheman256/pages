@@ -14,8 +14,51 @@ debugging trying to find out why something isn't working.
 
 ![An indentation error](assets/highlight2.png)
 
+### Setting up [Pylint] and [Black] in your IDE
+
+6.101 in Spring 2023 introduces [Pylint] and [Black]. [Pylint] can help you spot
+errors and bad code style in your code, while [Black] formats your code into a
+common style that's more readable.[^tools] The "Command Line" reading can help
+you install these tools on your computer.
+
+#### VSCode
+
+In VSCode, Pylint and Black can both be used with the official [Python
+extension].
+
+Once you've installed this extension, you can switch the linter to Pylint by
+[following these instructions](https://code.visualstudio.com/docs/python/linting#_enable-linting).
+It should be turned on by default if you have Pylint installed.
+
+You can set the code formatter to use Black with
+[these instructions](https://code.visualstudio.com/docs/python/editing#_formatting).
+
+The "Format on Save" option in settings will automatically run Black and fix
+your code for you every time you save it.
+
+#### PyCharm
+
+Setting up Pylint in PyCharm can be done with
+[this Pylint extension](https://plugins.jetbrains.com/plugin/11084-pylint).
+
+Similarly, there's also an extension to format your code with Black. Follow
+[the instructions here](https://black.readthedocs.io/en/stable/integrations/editors.html#as-local-server)
+to set it up.
+
+[pylint]: https://pylint.readthedocs.io/en/stable/
+[black]: https://black.readthedocs.io/en/stable/
 [vscode]: https://code.visualstudio.com/
 [pycharm]: https://www.jetbrains.com/pycharm/
+[python extension]:
+  https://marketplace.visualstudio.com/items?itemName=ms-python.python
+
+[^tools]:
+    While it might seem at first glance that Pylint and Black are similar tools,
+    they actually do different things! Pylint is a
+    **[linter](<https://en.wikipedia.org/wiki/Lint_(software)>)**, which helps
+    you spot errors and bad patterns in your code, while Black is a
+    **formatter**, which automatically restructures your code into a common
+    format to make it easier to read and consistent with style.
 
 ## Error messages are telling you something!
 
