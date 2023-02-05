@@ -60,6 +60,53 @@ to set it up.
     **formatter**, which automatically restructures your code into a common
     format to make it easier to read and consistent with style.
 
+### Turning off Black formatting
+
+If you're using Black to format your code, you'll notice that sometimes it likes
+to reformat your lists, when we might want them formatted a different way. Say
+I'm using a length-9 list to represent a 3&times;3 data structure. I might
+format this list like this to hint at this behavior.
+
+```py
+my_box = [
+    0,  1,  2,
+    3,  4,  5,
+    6,  7,  8,
+]
+```
+
+With Black, however, `my_box` gets turned into a long list, removing this nice
+3&times;3 grid that we made.
+
+```py
+# After formatting with Black
+my_box = [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+]
+```
+
+We can use a comment of `#!py # fmt: off` to turn off formatting temporarily,
+and `#!py # fmt: on` to turn it back on. Black will ignore all code between
+these two comments, leaving our precious `my_box` alone.
+
+```py
+# fmt: off
+my_box = [
+    0,  1,  2,
+    3,  4,  5,
+    6,  7,  8,
+]
+# fmt: on
+```
+
 ## Error messages are telling you something!
 
 Similarly, error messages in Python are designed to tell you what your problem
