@@ -29,11 +29,13 @@ overview of this guide:
 
 1. [General Advice] - General advice for beginners of programming on writing and
    debugging code.
-2. [Useful Functions] - A wide variety of functions that will come in handy in
-   6.101
-3. [Editing Python] - Python-specific code style and editing tips
-4. [Comprehensions] - An overview of Python's powerful comprehension feature
-5. [Avoid This] - Some common pitfalls to avoid or watch out for as you write
+1. [Useful Functions] - A wide variety of built-in functions that will come in
+   handy in 6.101
+1. [Trick Sheet] - Simple, handy Python tricks that you can use to elegantly
+   check or manipulate data
+1. [Editing Python] - Python-specific code style and editing tips
+1. [Comprehensions] - An overview of Python's powerful comprehension feature
+1. [Avoid This] - Some common pitfalls to avoid or watch out for as you write
    Python for 6.101
 
 The [Useful Functions] and [Comprehensions] sections are more code-heavy, while
@@ -63,7 +65,8 @@ Feel free to copy or adapt it for your own Python course materials!
 [python standard library]: https://docs.python.org/3/library/index.html
 [general advice]: 01_advice.md
 [useful functions]: 02_functions.md
-[editing python]: 03_editing.md
-[comprehensions]: 04_comprehensions.md
-[avoid this]: 05_avoid.md
+[trick sheet]: 03_tricks.md
+[editing python]: 04_editing.md
+[comprehensions]: 05_comprehensions.md
+[avoid this]: 06_avoid.md
 [license]: https://creativecommons.org/licenses/by-sa/4.0/
