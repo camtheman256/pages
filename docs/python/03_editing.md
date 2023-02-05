@@ -243,10 +243,10 @@ for _ in range(10):
     do_thing()
 ```
 
-It's less common, but you can also do this in a list comprehension! If we have a
-generator that we're pulling values from, we don't need the iterator variable
-and can discard it.
+It's less common, but you can also do this in a list comprehension! Say we want
+to make a list of 10 random numbers. We don't need the iterator, so we can
+assign it to `_` to show that we're not using it.
 
 ```python
-values = [next(generator) for _ in range(10)]
+values = [random.random() for _ in range(10)]
 ```
