@@ -1,5 +1,5 @@
 ---
-title: About This Guide
+description: A guide to Python programming for MIT 6.101 students
 ---
 
 # Python Tricks You Should Know
@@ -15,6 +15,8 @@ labs.
 They won't help you with the labs directly, but they'll improve your Python
 developer experience to help you write better, more efficient code that you can
 understand. Without further ado, here's **Python Tricks You Should Know**.
+
+This guide can be accessed at [python.camk.co](https://python.camk.co).
 
 <!-- prettier-ignore-start -->
 !!! note
