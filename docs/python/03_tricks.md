@@ -98,3 +98,10 @@ True
 Python has a way to represent infinity, which might be helpful to you to specify
 values that are invalid or out-of-bounds when looping through a data structure.
 To use this value, use `#!py float('inf')`.
+
+```pycon
+>>> # Using infinity for players with invalid scores
+>>> scores = [15, float('inf'), 20, 3, float('inf'), 30]
+>>> min(scores)
+3
+```
