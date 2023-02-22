@@ -92,3 +92,9 @@ False
 >>> 1 <= x <= 5
 True
 ```
+
+## Infinity
+
+Python has a way to represent infinity, which might be helpful to you to specify
+values that are invalid or out-of-bounds when looping through a data structure.
+To use this value, use `#!py float('inf')`.
