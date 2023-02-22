@@ -39,3 +39,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.inlinehilite
   - admonition
+
+extra:
+  analytics:
+    provider: google
+    property: G-0773QM221F
