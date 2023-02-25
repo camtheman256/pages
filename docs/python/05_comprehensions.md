@@ -1,3 +1,7 @@
+---
+description: An overview of Python's powerful comprehension feature
+---
+
 # Comprehension
 
 Comprehension in Python is a powerful shorthand tool, and it's worth taking a

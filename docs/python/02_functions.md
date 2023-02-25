@@ -1,3 +1,8 @@
+---
+description:
+  A wide variety of built-in functions that will come in handy in 6.101
+---
+
 # Useful Functions
 
 It's about time that we wrote some Python! Everything from here on out is about

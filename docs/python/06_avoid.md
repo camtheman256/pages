@@ -1,3 +1,8 @@
+---
+description:
+  Some common pitfalls to avoid or watch out for as you write Python for 6.101
+---
+
 # Avoid This
 
 This section includes some pitfalls to avoid when you're writing Python that

@@ -1,3 +1,7 @@
+---
+description: Python-specific code style and editing tips
+---
+
 # Editing Python
 
 This section contains general tips to improve your experience writing Python.

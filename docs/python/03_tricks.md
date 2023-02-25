@@ -1,3 +1,9 @@
+---
+description:
+  Simple, handy Python tricks that you can use to elegantly check or manipulate
+  data
+---
+
 # Trick Sheet
 
 This page contains concise ways to manipulate data in Python that can save you
