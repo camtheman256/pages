@@ -29,7 +29,7 @@ theme:
       primary: cyan
       toggle:
         icon: material/brightness-4
-        name: Switch to system preference
+        name: Switch to light mode
 
 markdown_extensions:
   - toc:
