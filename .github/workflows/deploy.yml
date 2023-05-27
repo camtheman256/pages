@@ -42,7 +42,7 @@ jobs:
             path: site
   
   deploy:
-    if: github.ref_name == 'master'
+    if: github.ref_name == 'main'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
