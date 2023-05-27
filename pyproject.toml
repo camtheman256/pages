@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pages"
+version = "0.1.0"
+description = "Cameron's Pages"
+authors = ["Cameron Kleiman <camtheman256@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mkdocs-material = "^9.1.14"
+Pillow = "^9.5.0"
+CairoSVG = "^2.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
