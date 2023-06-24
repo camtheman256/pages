@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-mkdocs-material = "^9.1.16"
+mkdocs-material = "^9.1.17"
 Pillow = "^9.5.0"
 CairoSVG = "^2.7.0"
 
