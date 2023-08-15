@@ -30,6 +30,7 @@ jobs:
         uses: actions/setup-python@v4.6.1
         with:
           python-version: 3.11
+          cache: poetry
       - name: Setup Poetry
         run: pip install -U poetry
       - name: Install Dependencies
