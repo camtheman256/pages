@@ -31,11 +31,10 @@ In VSCode, Pylint and Black can both be used with the official [Python
 extension].
 
 Once you've installed this extension, you can switch the linter to Pylint by
-[following these instructions](https://code.visualstudio.com/docs/python/linting#_enable-linting).
-It should be turned on by default if you have Pylint installed.
+[following these instructions and installing the Pylint extension](https://code.visualstudio.com/docs/python/linting).
 
 You can set the code formatter to use Black with
-[these instructions](https://code.visualstudio.com/docs/python/editing#_formatting).
+[these instructions to install the Black extension](https://code.visualstudio.com/docs/python/formatting).
 
 The "Format on Save" option in settings will automatically run Black and fix
 your code for you every time you save it.
